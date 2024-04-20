@@ -34,7 +34,7 @@ public class PersonaServiceImpl implements PersonaService {
     public Persona modificarPersona(Long id, Persona persona) {
         Persona personaBBDD = personaRepository.findById(id).orElse(null);
 
-        if(personaBBDD != null){
+        if (personaBBDD != null) {
             personaBBDD.setNombre(persona.getNombre());
             personaBBDD.setEdad(persona.getEdad());
             return personaRepository.save(personaBBDD);

@@ -1,21 +1,19 @@
 package com.pruebaCurso.primeraPruebaSpringBoot;
 
-import com.pruebaCurso.primeraPruebaSpringBoot.entities.Persona;
 import com.pruebaCurso.primeraPruebaSpringBoot.service.PersonaService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class PrimeraPruebaSpringBootApplication {
 
-	@Autowired
-	private PersonaService personaService;
+    @Autowired
+    private PersonaService personaService;
 
-	public static void main(String[] args) {
-		SpringApplication.run(PrimeraPruebaSpringBootApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(PrimeraPruebaSpringBootApplication.class, args);
+    }
 
 /*
 	@Override

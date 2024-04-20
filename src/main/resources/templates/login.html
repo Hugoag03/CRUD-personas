@@ -27,30 +27,30 @@
 </head>
 <body>
 
-    <div>
-        <h2>Formulario de autenticación</h2>
-    </div>
-    <div th:if="${param.error}">
-        <h3>Username o password inválidos</h3>
-    </div>
-    <div th:if="${param.logout}">
-        <h3>Ha cerrado su sesión con éxito</h3>
-    </div>
-    <div>
-        <form th:action="@{/login}" method="post">
-            <div>
-                <label>Username: </label>
-                <input type="text" name="username">
-            </div>
-            <div>
-                <label>Password: </label>
-                <input type="text" name="password">
-            </div>
-            <div>
-                <input type="submit" value="Login">
-            </div>
-        </form>
-    </div>
+<div>
+    <h2>Formulario de autenticación</h2>
+</div>
+<div th:if="${param.error}">
+    <h3>Username o password inválidos</h3>
+</div>
+<div th:if="${param.logout}">
+    <h3>Ha cerrado su sesión con éxito</h3>
+</div>
+<div>
+    <form th:action="@{/login}" method="post">
+        <div>
+            <label>Username: </label>
+            <input type="text" name="username">
+        </div>
+        <div>
+            <label>Password: </label>
+            <input type="text" name="password">
+        </div>
+        <div>
+            <input type="submit" value="Login">
+        </div>
+    </form>
+</div>
 
 </body>
 </html>

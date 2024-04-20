@@ -8,7 +8,7 @@
 
 <div align="center">
 
-    <form th:object="${persona}" method="post">
+    <form th:object="${persona}" method="post" th:action="@{/personas/nueva}">
         <input type="hidden" th:field="*{id}">
         <h1>Formulario de persona</h1>
         <table border="0" cellpadding="10">

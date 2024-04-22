@@ -1,13 +1,16 @@
 package com.pruebaCurso.primeraPruebaSpringBoot.service;
 
+import com.pruebaCurso.primeraPruebaSpringBoot.entities.Role;
 import com.pruebaCurso.primeraPruebaSpringBoot.entities.User;
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.*;
 
 @AllArgsConstructor
 public class MyUserDetails implements UserDetails {
@@ -16,8 +19,15 @@ public class MyUserDetails implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        SimpleGrantedAuthority authority = new SimpleGrantedAuthority(user.getRole());
-        return Arrays.asList(authority);
+        /*SimpleGrantedAuthority authority = new SimpleGrantedAuthority(user.getRole());
+        return Arrays.asList(authority);*/
+        Set<Role> roles = user.getRoles();
+        List<SimpleGrantedAuthority> authorities = new ArrayList<>();
+
+        for(Role role : roles){
+            authorities.add(new SimpleGrantedAuthority(role.getNombre()));
+        }
+        return authorities;
     }
 
     @Override

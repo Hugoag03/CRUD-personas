@@ -1,4 +1,4 @@
-Bienvenido a la Aplicación de Gestión de Personas
+¡Bienvenido a la Aplicación de Gestión de Personas
 
 Esta es una aplicación web basada en un CRUD.
 Antes de probarla debes tener en cuenta varios factores.
@@ -39,13 +39,13 @@ INSERT INTO `bbdd_primeraapp`.`users` (`user_id`, `enabled`, `password`, `userna
 
 INSERT INTO `bbdd_primeraapp`.`users` (`user_id`, `enabled`, `password`, `username`) VALUES (3, 1, '$2a$10$WJkrk.OUbtwc67Pbfri0/.GEf7104PvMHitBTvV2Y5PqeXSnyGeE2', 'user2');
       
-INSERT INTO `bbdd_primeraapp`.`roles` (`role_id`, `nombre`) VALUES ('1', 'ROLE_ADMIN');
+INSERT INTO `bbdd_primeraapp`.`roles` (`role_id`, `nombre`) VALUES ('1', 'ADMIN');
 
-INSERT INTO `bbdd_primeraapp`.`roles` (`role_id`, `nombre`) VALUES ('2', 'ROLE_USER');
+INSERT INTO `bbdd_primeraapp`.`roles` (`role_id`, `nombre`) VALUES ('2', 'USER');
 
-INSERT INTO `bbdd_primeraapp`.`roles` (`role_id`, `nombre`) VALUES ('3', 'ROLE_EDITOR');
+INSERT INTO `bbdd_primeraapp`.`roles` (`role_id`, `nombre`) VALUES ('3', 'EDITOR');
 
-INSERT INTO `bbdd_primeraapp`.`roles` (`role_id`, `nombre`) VALUES ('4', 'ROLE_CREATOR');
+INSERT INTO `bbdd_primeraapp`.`roles` (`role_id`, `nombre`) VALUES ('4', 'CREATOR');
 
 INSERT INTO `bbdd_primeraapp`.`users_roles` (`user_id`, `role_id`) VALUES ('1', '1');
 
@@ -54,6 +54,8 @@ INSERT INTO `bbdd_primeraapp`.`users_roles` (`user_id`, `role_id`) VALUES ('2', 
 INSERT INTO `bbdd_primeraapp`.`users_roles` (`user_id`, `role_id`) VALUES ('2', '4');
 
 INSERT INTO `bbdd_primeraapp`.`users_roles` (`user_id`, `role_id`) VALUES ('3', '3');
+
+Para probar la web debes introducir el username de alguno de los usuarios creados y la contraseña está encriptada pero para acceder tan solo debes escribir 'password'.
 
 Si en lugar de probar esta rama (que es la más recomendable y completa) quieres probar otra, debes añadir datos tan solo a la tabla de users pero añadiendole otro campo llamado role_id.
 

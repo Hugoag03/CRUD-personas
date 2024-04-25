@@ -1,26 +1,14 @@
-package com.pruebaCurso.primeraPruebaSpringBoot;
+package com.pruebaCurso.primeraPruebaSpringBoot; // Paquete donde se encuentra la clase
 
-import com.pruebaCurso.primeraPruebaSpringBoot.service.PersonaService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import com.pruebaCurso.primeraPruebaSpringBoot.service.PersonaService; // Importación de la interfaz PersonaService
+import org.springframework.beans.factory.annotation.Autowired; // Importación de la anotación Autowired
+import org.springframework.boot.SpringApplication; // Importación de la clase SpringApplication
+import org.springframework.boot.autoconfigure.SpringBootApplication; // Importación de la anotación SpringBootApplication
 
-@SpringBootApplication
-public class PrimeraPruebaSpringBootApplication {
+@SpringBootApplication // Anotación que combina @Configuration, @EnableAutoConfiguration y @ComponentScan
+public class PrimeraPruebaSpringBootApplication { // Clase principal de la aplicación
 
-    @Autowired
-    private PersonaService personaService;
-
-    public static void main(String[] args) {
-        SpringApplication.run(PrimeraPruebaSpringBootApplication.class, args);
+    public static void main(String[] args) { // Método principal que arranca la aplicación Spring Boot
+        SpringApplication.run(PrimeraPruebaSpringBootApplication.class, args); // Inicia la aplicación Spring Boot
     }
-
-/*
-	@Override
-	public void run(String... args) throws Exception {
-		personaService.crearPersona(new Persona(1L, "Juan", 20));
-		personaService.crearPersona(new Persona(2L, "Pedro", 23));
-	}
-
- */
 }

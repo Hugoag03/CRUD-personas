@@ -2,11 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acceso denegado</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        .error-container {
+            text-align: center;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            animation: shake 0.5s infinite alternate;
+        }
+
+        h2 {
+            color: #dc3545;
+            margin-bottom: 20px;
+        }
+
+        @keyframes shake {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(10px);
+            }
+        }
+    </style>
 </head>
 <body>
-
-<h2>Lo sentimos, tú no tienes permiso</h2>
-
+<div class="error-container">
+    <h2>Lo sentimos, tú no tienes permiso</h2>
+    <img src="https://media.giphy.com/media/jpFTmBy2DRbOzpjmfh/giphy.gif" alt="Acceso denegado" style="width: 200px; border-radius: 10px;">
+</div>
 </body>
 </html>

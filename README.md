@@ -3,11 +3,9 @@
 Esta es una aplicación web basada en un CRUD.
 Antes de probarla debes tener en cuenta varios factores.
 
-Como puedes ver está dividido en distintas ramas, la master tiene la parte más simple, un crud de personas, sin ningún tipo de seguridad.
+Como puedes ver está dividido en distintas ramas, la rama master tiene la último actualización de la app web.
 
-Las demás ramas fueron trabajadas con Spring Security, además de un poco de estilo.
-
-Hay distintas branches, Spring Security en memoria, Spring Security usando JDBC... Cada una se entiende que tipo usa por el nombre de estas.
+Además de la principal, hay distintas branches: Spring Security en memoria, Spring Security usando JDBC... Cada una se entiende que tipo usa por el nombre de estas.
 
 Ahora debes seguir algunas pautas.
 Para poder ejecutar esta app debes realizar varios pasos:
@@ -29,7 +27,7 @@ spring.datasource.password=123456 --> Introduce la contraseña para acceder a tu
 Luego ejecuta la base de datos.
 
 
-3. (Si pruebas la rama de seguridad-roles) Agrega desde la base de datos algunos usuarios y roles para poder acceder (Debes haber ejecutado el programa antes de rellenar las tablas).
+3. Agrega desde la base de datos algunos usuarios y roles para poder acceder (Debes haber ejecutado el programa antes de rellenar las tablas).
 
 Ejemplo:
 
@@ -57,6 +55,6 @@ INSERT INTO `bbdd_primeraapp`.`users_roles` (`user_id`, `role_id`) VALUES ('3', 
 
 Para probar la web debes introducir el username de alguno de los usuarios creados y la contraseña está encriptada pero para acceder tan solo debes escribir 'password'.
 
-Si en lugar de probar esta rama (que es la más recomendable y completa) quieres probar otra, debes añadir datos tan solo a la tabla de users pero añadiendole otro campo llamado role_id.
+Si en lugar de probar la rama master (que es la más recomendable y completa) quieres probar otra, debes añadir datos tan solo a la tabla de users pero añadiendole otro campo llamado role_id.
 
 5. ¡Disfruta de la Experiencia!
